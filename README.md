@@ -17,3 +17,7 @@ HTML: Used to structure the content on the website.
 CSS: Used to style the website and make it responsive across various screen sizes.
 JavaScript: Adds interactivity such as switching between tabs in the "About Me" section and opening/closing the side menu.
 Google Forms: The contact form is connected to a Google Sheets script, allowing messages to be submitted directly.
+
+
+Connecting to Google Sheet
+" https://github.com/jamiewilson/form-to-google-sheets.git" Follow this link to connect with the google sheet
