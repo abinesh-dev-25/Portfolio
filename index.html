@@ -206,28 +206,17 @@
             sidemenu.style.right = "-200px";
         }
     </script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
-        const form = document.forms['submit-to-google-sheet'];
+<script>
+  const scriptURL = '<SCRIPT URL>'
+  const form = document.forms['submit-to-google-sheet']
 
-        form.addEventListener('submit', e => {
-            e.preventDefault();  // Prevent form from submitting the usual way
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    console.log('Success!', response);
-                    // Show success message
-                    document.getElementById("msg").innerHTML = "Your message has been sent successfully!";
-                    setTimeout.remove(function)
-                })
-                .catch(error => {
-                    console.error('Error!', error.message);
-                    // Show error message
-                    document.getElementById("msg").innerHTML = "There was an error sending your message. Please try again!";
-                    setTimeout.remove(function)
-
-                });
-        });
-    </script>
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 </body>
 
 </html>
